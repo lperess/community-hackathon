@@ -4,9 +4,6 @@ import "./Final.scss";
 function Final() {
     return (
         <section className='section-end'>
-            <div className='img'>
-                Não consegui colocar img
-            </div>
             <div className='tittle-page'>
                 <h1>Parabéns!</h1>
                 <h2>Sua comunidade recebeu 40 cestas básicas. <br /> Para onde você gostaria de encaminhá-las?</h2>
