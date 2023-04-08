@@ -51,6 +51,10 @@
     background-color: #f9fafc;
     border: 1px solid rgba(204, 203, 203, 0.473);
   }
+
+  input:focus {
+    outline: none;
+  }
 }
 
 .nav-buttons {
@@ -72,6 +76,11 @@
     border-radius: 18px;
     height: 35px;
     width: 100px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #e2e5ec;
   }
 }
 
@@ -91,4 +100,16 @@
 .card-unidade {
   border: 1px solid rgba(122, 122, 122, 0.144);
   margin-right: 40px;
+  padding: 16px;
+
+  h2 {
+    color: #a3a3a3;
+  }
+
+  img {
+    width: 354px;
+    height: 189px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
 }
