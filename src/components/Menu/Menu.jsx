@@ -2,21 +2,19 @@ import React, { useState } from "react";
 import HomeIcon from "@mui/icons-material/Home";
 import PersonIcon from "@mui/icons-material/Person";
 import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
-import { Link } from "react-router-dom";
 import SettingsIcon from "@mui/icons-material/Settings";
 import ShortcutIcon from "@mui/icons-material/Shortcut";
-import PeopleIcon from "@mui/icons-material/People";
 import HubIcon from "@mui/icons-material/Hub";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import { useNavigate } from "react-router-dom";
-import "./styles.scss";
+import "./Menu.scss";
 
 export default function Menu() {
   const navigate = useNavigate();
   const [selectedSection] = useState(location.pathname);
 
   const onClick = (section) => {
-    if (section === "home" || section === "connect" || section === "forum") {
+    if (section === "connect") {
       navigate(`/${section}`);
     }
   };
@@ -95,16 +93,6 @@ export default function Menu() {
         >
           <ShortcutIcon />
           Convide Membros
-        </button>
-        <button
-          type="button"
-          onClick={() => onClick("forum")}
-          className={`nav-btn ${
-            selectedSection === "/forum" ? "selected-section" : "not-selected"
-          }`}
-        >
-          <PeopleIcon />
-          Comunidades
         </button>
       </nav>
     </div>

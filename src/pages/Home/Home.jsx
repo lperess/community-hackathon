@@ -1,6 +1,6 @@
 import React from "react";
 import Menu from "../../components/Menu/Menu";
-import "./styles.scss";
+import "./Home.scss";
 
 export default function Home() {
   return (
