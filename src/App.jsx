@@ -8,9 +8,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/home" Component={Home} />
-        <Route path="/connect" Component={Forum} />
-        <Route path="/end" Component={Final} />
+        <Route exact path="/home" Component={Home} />
+        <Route exact path="/connect" Component={Forum} />
+        <Route exact path="/end" Component={Final} />
         <Route path="*" element={<Navigate to="/connect" replace />} />
       </Routes>
     </BrowserRouter>
