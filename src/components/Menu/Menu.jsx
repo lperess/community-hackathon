@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import HomeIcon from "@mui/icons-material/Home";
 import PersonIcon from "@mui/icons-material/Person";
 import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
+import { Link } from "react-router-dom";
 import SettingsIcon from "@mui/icons-material/Settings";
 import ShortcutIcon from "@mui/icons-material/Shortcut";
+import PeopleIcon from '@mui/icons-material/People';
 import HubIcon from "@mui/icons-material/Hub";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import { useNavigate } from "react-router-dom";
@@ -37,9 +39,8 @@ export default function Menu() {
         <button
           type="button"
           onClick={() => onClick("home")}
-          className={`nav-btn ${
-            selectedSection === "/home" ? "selected-section" : "not-selected"
-          }`}
+          className={`nav-btn ${selectedSection === "/home" ? "selected-section" : "not-selected"
+            }`}
         >
           <HomeIcon />
           Home
@@ -47,9 +48,8 @@ export default function Menu() {
         <button
           type="button"
           onClick={() => onClick("members")}
-          className={`nav-btn ${
-            selectedSection === "members" ? "selected-section" : "not-selected"
-          }`}
+          className={`nav-btn ${selectedSection === "members" ? "selected-section" : "not-selected"
+            }`}
         >
           <PersonIcon />
           Membros
@@ -57,9 +57,8 @@ export default function Menu() {
         <button
           type="button"
           onClick={() => onClick("game")}
-          className={`nav-btn ${
-            selectedSection === "game" ? "selected-section" : "not-selected"
-          }`}
+          className={`nav-btn ${selectedSection === "game" ? "selected-section" : "not-selected"
+            }`}
         >
           <SportsEsportsIcon />
           Gamificação
@@ -67,9 +66,8 @@ export default function Menu() {
         <button
           type="button"
           onClick={() => onClick("connect")}
-          className={`nav-btn ${
-            selectedSection === "/connect" ? "selected-section" : "not-selected"
-          }`}
+          className={`nav-btn ${selectedSection === "/connect" ? "selected-section" : "not-selected"
+            }`}
         >
           <HubIcon />
           Conexões
@@ -77,9 +75,8 @@ export default function Menu() {
         <button
           type="button"
           onClick={() => onClick("adm")}
-          className={`nav-btn ${
-            selectedSection === "adm" ? "selected-section" : "not-selected"
-          }`}
+          className={`nav-btn ${selectedSection === "adm" ? "selected-section" : "not-selected"
+            }`}
         >
           <SettingsIcon />
           Administração
@@ -87,12 +84,20 @@ export default function Menu() {
         <button
           type="button"
           onClick={() => onClick("invite")}
-          className={`nav-btn ${
-            selectedSection === "invite" ? "selected-section" : "not-selected"
-          }`}
+          className={`nav-btn ${selectedSection === "invite" ? "selected-section" : "not-selected"
+            }`}
         >
           <ShortcutIcon />
           Convide Membros
+        </button>
+        <button
+          type="button"
+          onClick={() => onClick("invite")}
+          className={`nav-btn ${selectedSection === "invite" ? "selected-section" : "not-selected"
+            }`}
+        >
+          <PeopleIcon />
+          <Link to={`/forum`}>Comunidades</Link>
         </button>
       </nav>
     </div>
