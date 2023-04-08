@@ -11,7 +11,7 @@ function App() {
         <Route path="/home" Component={Home} />
         <Route path="/connect" Component={Forum} />
         <Route path="/end" Component={Final} />
-        <Route path="/" element={<Navigate to="/connect" replace />} />
+        <Route path="*" element={<Navigate to="/connect" replace />} />
       </Routes>
     </BrowserRouter>
   );
